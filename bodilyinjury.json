@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "injurydate": {
+      "title": "Date of Injury",
+      "type": "string",
+      "format": "date-time"
+    },
+    "injurytype": {
+      "title": "Type of Injury",
+      "type": "string",
+      "enum": [
+        "animal bite",
+        "fracture",
+        "concussion or head injury",
+        "motor vehicle accident",
+        "motorcycle accident",
+        "laceration",
+        "crash injury",
+        "burn",
+        "other"
+      ]
+    },
+    "injuryother": {
+      "title": "Other Injury",
+      "type": "string"
+    },
+    "testing": {
+      "title": "Testing",
+      "type": "string"
+    },
+    "treatment": {
+      "title": "Treatment",
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "admission": {
+      "title": "Admission Required?",
+      "type": "boolean",
+      "enum": [
+        true,
+        false
+      ],
+      "default": false
+    },
+    "mortality": {
+      "title": "Did Injury Lead to death?",
+      "type": "boolean",
+      "enum": [
+        true,
+        false
+      ],
+      "default": false
+    }
+  },
+  "_id": "data/bodilyinjury.json"
+}
